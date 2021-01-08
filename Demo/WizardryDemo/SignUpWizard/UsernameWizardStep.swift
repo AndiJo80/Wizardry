@@ -85,7 +85,7 @@ extension UsernameWizardStep: WizardStep {
 private extension UsernameWizardStep {
     
     func isValidUsername(_ username: String) -> Bool {
-        return username.characters.count > 0
+        return username.count > 0
     }
     
     func showUsernameUnavailableAlert() {

@@ -58,6 +58,6 @@ extension PasswordWizardStep: WizardStep {
 private extension PasswordWizardStep {
 
     func isValidPassword(_ password: String) -> Bool {
-        return password.characters.count >= 8
+        return password.count >= 8
     }
 }

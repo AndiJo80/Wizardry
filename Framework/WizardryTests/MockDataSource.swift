@@ -39,7 +39,7 @@ final class MockDataSource: WizardDataSource {
     }
     
     private func indexOf(wizardStep: WizardStep) -> Int {
-        let index = mockSteps.index { $0 == wizardStep }
+		let index = mockSteps.firstIndex { $0 == wizardStep }
         return index!
     }
 }

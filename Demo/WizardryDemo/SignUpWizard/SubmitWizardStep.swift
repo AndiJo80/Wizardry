@@ -81,15 +81,15 @@ private extension SubmitWizardStep {
             completionHandler: completionHandler)
     }
     
-    func showSuccessAlertWithCompletionHandler(_ completionHandler: @escaping (Void) -> Void) {
+    func showSuccessAlertWithCompletionHandler(_ completionHandler: @escaping () -> Void) {
         showAlertWithTitle("Welcome!", message: "Thanks for signing up, \(model.username!).", completionHandler: completionHandler)
     }
     
-    func showFailureAlertWithCompletionHandler(_ completionHandler: @escaping (Void) -> Void) {
+    func showFailureAlertWithCompletionHandler(_ completionHandler: @escaping () -> Void) {
         showAlertWithTitle("Sorry", message: "Something went wrong, please try again later.", completionHandler: completionHandler)
     }
     
-    func showAlertWithTitle(_ title: String, message: String, completionHandler: @escaping (Void) -> Void) {
+    func showAlertWithTitle(_ title: String, message: String, completionHandler: @escaping () -> Void) {
         let alert = UIAlertController(
             title: title,
             message: message,

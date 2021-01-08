@@ -62,15 +62,15 @@ private extension SignUpWizardViewController {
         viewController.view.translatesAutoresizingMaskIntoConstraints = true
         viewController.view.frame = contentView.bounds
         
-        addChildViewController(viewController)
+		addChild(viewController)
         contentView.addSubview(viewController.view)
-        viewController.didMove(toParentViewController: self)
+		viewController.didMove(toParent: self)
     }
     
     func removeChildWizardStepViewController(_ viewController: UIViewController) {
-        viewController.willMove(toParentViewController: nil)
+		viewController.willMove(toParent: nil)
         viewController.view.removeFromSuperview()
-        viewController.removeFromParentViewController()
+		viewController.removeFromParent()
     }
     
     func slideIn(_ stepViewController: UIViewController, fromTheRight: Bool) {
@@ -91,7 +91,7 @@ private extension SignUpWizardViewController {
         UIView.animate(
             withDuration: 0.7,
             delay: 0,
-            options: UIViewAnimationOptions(),
+			options: UIView.AnimationOptions(),
             animations: {
                 stepView?.center = centerOfView!
                 self.currentStepViewController?.view.center = outroCenter

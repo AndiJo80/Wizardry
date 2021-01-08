@@ -82,21 +82,21 @@ open class WizardViewController: UIViewController {
 public extension WizardViewController {
     
     /// Action method that handles when the user wants to navigate to the next wizard step.
-    @IBAction public func handleGoToNextStep(_ sender: AnyObject) {
+    @IBAction func handleGoToNextStep(_ sender: AnyObject) {
         if isNavigating == false {
             wizard?.goToNextStep()
         }
     }
     
     /// Action method that handles when the user wants to navigate to the previous wizard step.
-    @IBAction public func handleGoToPreviousStep(_ sender: AnyObject) {
+    @IBAction func handleGoToPreviousStep(_ sender: AnyObject) {
         if isNavigating == false {
             wizard?.goToPreviousStep()
         }
     }
     
     /// Action method that handles when the user wants to stop using the wizard without completing all of its steps.
-    @IBAction public func handleWizardCanceled(_ sender: AnyObject) {
+    @IBAction func handleWizardCanceled(_ sender: AnyObject) {
         invokeCompletionHandler(canceled: true)
     }
 }
